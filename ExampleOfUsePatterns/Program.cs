@@ -10,6 +10,7 @@ namespace ExampleOfUsePatterns
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("ewfefwf");
         }
     }
 }
