@@ -8,9 +8,17 @@ namespace ExampleOfUsePatterns
 {
     class ArmsWarrior : IBornClass
     {
+        AxeInHands myAxe = new AxeInHands();
+        public void Attack(string weapon)
+        {
+            myAxe.HoldingAxe(weapon);
+            //myAxe = new CrashAxeInHands(myAxe);
+        }
         public void Row()
         {
             Console.WriteLine("I am ArmsWarrior!");
         }
+        
+        
     }
 }

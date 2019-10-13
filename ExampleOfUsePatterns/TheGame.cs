@@ -14,8 +14,9 @@ namespace ExampleOfUsePatterns
         {
             IBornClass heroClass = hero.FactoryMethodClass();
             IBornRace heroRace = hero.FactoryMethodRace();
-            heroClass.Row();
             heroRace.MyRaceIs();
+            heroClass.Row();
+            heroClass.Attack("Большой топор");
             // Уровень доступа к конструктору позволит вызывать его лишь из метода StartGame, который в свою очередь будет проверять на наличие уже существующего объекта
         }
 

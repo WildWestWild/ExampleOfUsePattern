@@ -9,6 +9,7 @@ namespace ExampleOfUsePatterns
     interface IBornClass
     {
         void Row(); // Какой класс
+        void Attack(string weapon); // Удар
     }
     interface IBornRace
     {

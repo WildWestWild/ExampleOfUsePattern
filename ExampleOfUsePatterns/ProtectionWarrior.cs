@@ -8,6 +8,11 @@ namespace ExampleOfUsePatterns
 {
     class ProtectionWarrior : IBornClass
     {
+        public void Attack(string weapon)
+        {
+            throw new NotImplementedException();
+        }
+
         public void Row()
         {
             Console.WriteLine("I am ProtectionWarrior!");

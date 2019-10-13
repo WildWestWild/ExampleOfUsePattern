@@ -43,9 +43,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbilityHoldingAxe.cs" />
+    <Compile Include="AbilityHoldingAxeDecorator.cs" />
     <Compile Include="ArcaneMage.cs" />
     <Compile Include="ArmsWarrior.cs" />
     <Compile Include="ClassFactory.cs" />
+    <Compile Include="AxeInHands.cs" />
+    <Compile Include="CrashAxeInHands.cs" />
     <Compile Include="FacrotyWarrior.cs" />
     <Compile Include="FactoryMage.cs" />
     <Compile Include="FuryWarrior.cs" />
