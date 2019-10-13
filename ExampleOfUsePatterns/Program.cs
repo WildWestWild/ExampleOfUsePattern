@@ -10,9 +10,9 @@ namespace ExampleOfUsePatterns
     {
         static void Main(string[] args)
         {
-            TheGame initializeGame = TheGame.StartGame();
-            
+            TheGame startWarrior = TheGame.StartGame(new FacrotyWarrior());
 
+            TheGame startMage = TheGame.StartGame(new FactoryMage());
         }
     }
 }

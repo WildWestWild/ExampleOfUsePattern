@@ -43,8 +43,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArcaneMage.cs" />
+    <Compile Include="ArmsWarrior.cs" />
+    <Compile Include="ClassFactory.cs" />
+    <Compile Include="FacrotyWarrior.cs" />
+    <Compile Include="FactoryMage.cs" />
+    <Compile Include="FuryWarrior.cs" />
+    <Compile Include="HumanRace.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProtectionWarrior.cs" />
     <Compile Include="TheGame.cs" />
   </ItemGroup>
   <ItemGroup>
