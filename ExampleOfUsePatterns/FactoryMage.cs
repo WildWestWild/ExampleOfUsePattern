@@ -8,11 +8,11 @@ namespace ExampleOfUsePatterns
 {
     class FactoryMage : ClassFactory
     {
+        BookSpell bookSpell = new BookSpell();
         public override IBornClass FactoryMethodClass()
         {
-            return new ArcaneMage();
+            return new ArcaneMage(bookSpell);
         }
-
         public override IBornRace FactoryMethodRace()
         {
             return new HumanRace();

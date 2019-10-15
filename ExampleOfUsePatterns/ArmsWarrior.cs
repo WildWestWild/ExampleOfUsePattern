@@ -18,7 +18,5 @@ namespace ExampleOfUsePatterns
         {
             Console.WriteLine("I am ArmsWarrior!");
         }
-        
-        
     }
 }
