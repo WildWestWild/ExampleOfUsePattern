@@ -47,6 +47,7 @@
     <Compile Include="AbilityHoldingAxeDecorator.cs" />
     <Compile Include="ArcaneMage.cs" />
     <Compile Include="ArmsWarrior.cs" />
+    <Compile Include="ClassAdapter.cs" />
     <Compile Include="ClassFactory.cs" />
     <Compile Include="AxeInHands.cs" />
     <Compile Include="CrashAxeInHands.cs" />
@@ -56,6 +57,7 @@
     <Compile Include="FuryWarrior.cs" />
     <Compile Include="HumanRace.cs" />
     <Compile Include="IManageSpellPanel.cs" />
+    <Compile Include="IRaging.cs" />
     <Compile Include="ISubscribeSpell.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

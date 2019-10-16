@@ -6,11 +6,16 @@ using System.Threading.Tasks;
 
 namespace ExampleOfUsePatterns
 {
-    class FuryWarrior : IBornClass
+    class FuryWarrior : IBornClass, IRaging
     {
         public void Attack(string weapon)
         {
             throw new NotImplementedException();
+        }
+
+        public void BattleCry()
+        {
+            Console.WriteLine("За Орду!");
         }
 
         public void Row()
