@@ -10,6 +10,8 @@ namespace ExampleOfUsePatterns
     {
         BookSpell _bookSpell;
         SpellPanel spellPanelList;
+        EditorIconPannel editor;
+        Controller controller;
         private string enterLine;
         private int numberOfSpell;
         private int NumberOfSpell
@@ -36,7 +38,14 @@ namespace ExampleOfUsePatterns
         }
         public ArcaneMage(BookSpell bookSpell)
         {
-            spellPanelList = new SpellPanel(); // Собственная панель способоностей
+            controller = new Controller();
+           
+            editor = new EditorIconPannel(controller); // Отрисовка иконок на панели
+            spellPanelList = new SpellPanel(controller, editor); // Собственная панель способоностей
+
+            controller.SpellPannel = spellPanelList;
+            controller.EditorIconPannel = editor;
+
             bookSpell.showSpellPanel(); // Книга способностей
             _bookSpell = bookSpell;
         }
@@ -89,10 +98,12 @@ namespace ExampleOfUsePatterns
                 {
                     case "1": {
                             spellPanelList.AddSpellOnPanel(returnNeedSpell(SelectSpell(), _bookSpell.bookSpellList));
+                            spellPanelList.Send("Добавлена");
                         } break;
                     case "2": {
                             int index = SelectSpell();
                             spellPanelList.spellPannelList.RemoveAt(--index);
+                            spellPanelList.Send("Удалена");
                         } break;
                     case "3": {
                             spellPanelList.showSpellPanel();

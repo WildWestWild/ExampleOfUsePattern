@@ -6,16 +6,19 @@ using System.Threading.Tasks;
 
 namespace ExampleOfUsePatterns
 {
-    class SpellPanel : IManageSpellPanel
+    class SpellPanel : Dependence, IManageSpellPanel 
     {
+        Dependence _editor;
         public List<ISubscribeSpell> spellPannelList;
-        public SpellPanel()
+        public SpellPanel(Mediator mediator, Dependence editor) : base(mediator)
         {
             spellPannelList = new List<ISubscribeSpell>();
+            _editor = editor;
         }
         public void AddSpellOnPanel(ISubscribeSpell spell)
         {
             spellPannelList.Add(spell);
+            _editor.Send("Добавление иконки на панель");
         }
 
         public void DeleteSpellOnPanel(ISubscribeSpell spell)
@@ -31,6 +34,11 @@ namespace ExampleOfUsePatterns
                 countSpell++;
                 item.inPanel(countSpell);
             }
+        }
+
+        public override void Trigger(string mes)
+        {
+            Console.WriteLine("Панель заклинаний: " + mes);
         }
     }
 }
