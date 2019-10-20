@@ -8,11 +8,17 @@ namespace ExampleOfUsePatterns
 {
     class ArmsWarrior : IBornClass
     {
-        AxeInHands myAxe = new AxeInHands();
+        // Внедрение зависимости
+        AbilityHoldingAxe _myAxe;
+        public ArmsWarrior(AbilityHoldingAxe myAxe)
+        {
+            _myAxe = myAxe;
+        }
         public void Attack(string weapon)
         {
-            myAxe.HoldingAxe(weapon);
-            ClassAdapter newSpec = new ClassAdapter(new ArmsWarrior());
+            _myAxe.HoldingAxe(weapon);
+            ArmsWarrior warrior = new ArmsWarrior(_myAxe);
+            ClassAdapter newSpec = new ClassAdapter(warrior);
             newSpec.BattleCry();
             //myAxe = new CrashAxeInHands(myAxe);
         }

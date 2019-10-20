@@ -8,15 +8,19 @@ namespace ExampleOfUsePatterns
 {
     class ClassAdapter : ArmsWarrior, IRaging
     {
-        ArmsWarrior _warrior;
+        private ArmsWarrior armsWarrior;
+
         //Реализация кастомного конструктора
-        public ClassAdapter(ArmsWarrior warrior)
+        public ClassAdapter(ArmsWarrior armsWarrior) : base (myAxe)
         {
-            _warrior = warrior;
+            this.armsWarrior = armsWarrior;
         }
+
+        public static AbilityHoldingAxe myAxe { get; private set; }
+
         public void BattleCry()
         {
-            _warrior.Row();
+            armsWarrior.Row();
         }
     }
 }

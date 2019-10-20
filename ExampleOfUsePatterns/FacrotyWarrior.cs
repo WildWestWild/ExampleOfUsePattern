@@ -11,7 +11,7 @@ namespace ExampleOfUsePatterns
     {
         public override IBornClass FactoryMethodClass()
         {
-            return new ArmsWarrior(); // Создаём AmrsWarrior
+            return new ArmsWarrior(new AxeInHands()); // Создаём AmrsWarrior
         }
 
         public override IBornRace FactoryMethodRace()
